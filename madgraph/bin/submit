@@ -3,7 +3,7 @@
 CARDDIR=""
 TAG=""
 MEM_KB=2048
-N_CPUS=12
+N_CPUS=4
 SCRAM=slc7_amd64_gcc700
 CMSSW=CMSSW_10_6_0
 
@@ -26,7 +26,7 @@ optional arguments:
   --scram SCRAM                 SCRAM architecture to use (default: $SCRAM)
 
 trailing arguments:
-  T2_SITE1 T2_SITE2 ...         space-separated list of sites to submit job to (default: T2_US_Purdue)
+  T2_SITE1 T2_SITE2 ...         space-separated list of sites to submit job to (default: T2_US_Purdue, or T2_US_UCSD)
 EOF
 exit 0
 }
@@ -58,7 +58,7 @@ done
 SITES=$@
 
 if [[ "$SITES" == "" ]]; then
-    SITES="T2_US_Purdue"
+    SITES="T2_US_UCSD"
 fi
 
 if [[ "$CARDDIR" == "" ]]; then
@@ -107,7 +107,7 @@ cp $PWD/bin/condor_executable $TASKDIR/condor_executable
 
 cat << EOF > $TASKDIR/submit.cmd
 universe                = Vanilla
-Requirements            = (HAS_SINGULARITY=?=True)
+Requirements            = ((HAS_SINGULARITY=?=True)&&(Machine != "cabinet-0-0-17.t2.ucsd.edu")&&(Machine != "cabinet-4-4-12.t2.ucsd.edu"))
 RequestMemory           = $MEM_KB
 RequestCpus             = $N_CPUS
 executable              = $TASKDIR/condor_executable

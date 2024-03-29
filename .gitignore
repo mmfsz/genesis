@@ -2,3 +2,10 @@
 *.lhe 
 *~
 *.pyc
+*.log
+*tar.gz
+**/tasks/*
+**/tests/*
+**/reweightCardsCreation/*.dat
+**/reweightCardsCreation/*.lst
+**/production/*summary.json

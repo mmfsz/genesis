@@ -1,0 +1,335 @@
+# MM: Card created automatically with create_reweight_card.py
+change mode NLO       # Define type of Reweighting. For LO sample this command
+                      # has no effect since only LO mode is allowed.
+change helicity False # carry out sum over helicities (CHECK)
+change rwgt_dir rwgt
+
+#[1/66] CH:-3.0
+launch --rewgt_name=scan_CH_m3p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -3.0 # CH
+
+#[2/66] CH:-2.8
+launch --rewgt_name=scan_CH_m2p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -2.8 # CH
+
+#[3/66] CH:-2.6
+launch --rewgt_name=scan_CH_m2p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -2.6 # CH
+
+#[4/66] CH:-2.4
+launch --rewgt_name=scan_CH_m2p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -2.4 # CH
+
+#[5/66] CH:-2.2
+launch --rewgt_name=scan_CH_m2p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -2.2 # CH
+
+#[6/66] CH:-2.0
+launch --rewgt_name=scan_CH_m2p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -2.0 # CH
+
+#[7/66] CH:-1.8
+launch --rewgt_name=scan_CH_m1p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -1.8 # CH
+
+#[8/66] CH:-1.6
+launch --rewgt_name=scan_CH_m1p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -1.6 # CH
+
+#[9/66] CH:-1.4
+launch --rewgt_name=scan_CH_m1p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -1.4 # CH
+
+#[10/66] CH:-1.2
+launch --rewgt_name=scan_CH_m1p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -1.2 # CH
+
+#[11/66] CH:-1.0
+launch --rewgt_name=scan_CH_m1p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -1.0 # CH
+
+#[12/66] CH:-0.8
+launch --rewgt_name=scan_CH_m0p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -0.8 # CH
+
+#[13/66] CH:-0.6
+launch --rewgt_name=scan_CH_m0p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -0.6 # CH
+
+#[14/66] CH:-0.4
+launch --rewgt_name=scan_CH_m0p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -0.4 # CH
+
+#[15/66] CH:-0.2
+launch --rewgt_name=scan_CH_m0p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -0.2 # CH
+
+#[16/66] CH:0.0
+launch --rewgt_name=scan_CH_0p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 0.0 # CH
+
+#[17/66] CH:0.2
+launch --rewgt_name=scan_CH_0p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 0.2 # CH
+
+#[18/66] CH:0.4
+launch --rewgt_name=scan_CH_0p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 0.4 # CH
+
+#[19/66] CH:0.6
+launch --rewgt_name=scan_CH_0p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 0.6 # CH
+
+#[20/66] CH:0.8
+launch --rewgt_name=scan_CH_0p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 0.8 # CH
+
+#[21/66] CH:1.0
+launch --rewgt_name=scan_CH_1p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 1.0 # CH
+
+#[22/66] CH:1.2
+launch --rewgt_name=scan_CH_1p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 1.2 # CH
+
+#[23/66] CH:1.4
+launch --rewgt_name=scan_CH_1p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 1.4 # CH
+
+#[24/66] CH:1.6
+launch --rewgt_name=scan_CH_1p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 1.6 # CH
+
+#[25/66] CH:1.8
+launch --rewgt_name=scan_CH_1p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 1.8 # CH
+
+#[26/66] CH:2.0
+launch --rewgt_name=scan_CH_2p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 2.0 # CH
+
+#[27/66] CH:2.2
+launch --rewgt_name=scan_CH_2p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 2.2 # CH
+
+#[28/66] CH:2.4
+launch --rewgt_name=scan_CH_2p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 2.4 # CH
+
+#[29/66] CH:2.6
+launch --rewgt_name=scan_CH_2p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 2.6 # CH
+
+#[30/66] CH:2.8
+launch --rewgt_name=scan_CH_2p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 2.8 # CH
+
+#[31/66] CH:3.0
+launch --rewgt_name=scan_CH_3p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 3.0 # CH
+
+#[32/66] CH:3.2
+launch --rewgt_name=scan_CH_3p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 3.2 # CH
+
+#[33/66] CH:3.4
+launch --rewgt_name=scan_CH_3p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 3.4 # CH
+
+#[34/66] CH:3.6
+launch --rewgt_name=scan_CH_3p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 3.6 # CH
+
+#[35/66] CH:3.8
+launch --rewgt_name=scan_CH_3p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 3.8 # CH
+
+#[36/66] CH:4.0
+launch --rewgt_name=scan_CH_4p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 4.0 # CH
+
+#[37/66] CH:4.2
+launch --rewgt_name=scan_CH_4p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 4.2 # CH
+
+#[38/66] CH:4.4
+launch --rewgt_name=scan_CH_4p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 4.4 # CH
+
+#[39/66] CH:4.6
+launch --rewgt_name=scan_CH_4p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 4.6 # CH
+
+#[40/66] CH:4.8
+launch --rewgt_name=scan_CH_4p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 4.8 # CH
+
+#[41/66] CH:5.0
+launch --rewgt_name=scan_CH_5p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 5.0 # CH
+
+#[42/66] CH:5.2
+launch --rewgt_name=scan_CH_5p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 5.2 # CH
+
+#[43/66] CH:5.4
+launch --rewgt_name=scan_CH_5p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 5.4 # CH
+
+#[44/66] CH:5.6
+launch --rewgt_name=scan_CH_5p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 5.6 # CH
+
+#[45/66] CH:5.8
+launch --rewgt_name=scan_CH_5p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 5.8 # CH
+
+#[46/66] CH:6.0
+launch --rewgt_name=scan_CH_6p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 6.0 # CH
+
+#[47/66] CH:6.2
+launch --rewgt_name=scan_CH_6p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 6.2 # CH
+
+#[48/66] CH:6.4
+launch --rewgt_name=scan_CH_6p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 6.4 # CH
+
+#[49/66] CH:6.6
+launch --rewgt_name=scan_CH_6p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 6.6 # CH
+
+#[50/66] CH:6.8
+launch --rewgt_name=scan_CH_6p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 6.8 # CH
+
+#[51/66] CH:7.0
+launch --rewgt_name=scan_CH_7p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 7.0 # CH
+
+#[52/66] CH:7.2
+launch --rewgt_name=scan_CH_7p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 7.2 # CH
+
+#[53/66] CH:7.4
+launch --rewgt_name=scan_CH_7p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 7.4 # CH
+
+#[54/66] CH:7.6
+launch --rewgt_name=scan_CH_7p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 7.6 # CH
+
+#[55/66] CH:7.8
+launch --rewgt_name=scan_CH_7p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 7.8 # CH
+
+#[56/66] CH:8.0
+launch --rewgt_name=scan_CH_8p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 8.0 # CH
+
+#[57/66] CH:8.2
+launch --rewgt_name=scan_CH_8p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 8.2 # CH
+
+#[58/66] CH:8.4
+launch --rewgt_name=scan_CH_8p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 8.4 # CH
+
+#[59/66] CH:8.6
+launch --rewgt_name=scan_CH_8p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 8.6 # CH
+
+#[60/66] CH:8.8
+launch --rewgt_name=scan_CH_8p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 8.8 # CH
+
+#[61/66] CH:9.0
+launch --rewgt_name=scan_CH_9p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 9.0 # CH
+
+#[62/66] CH:9.2
+launch --rewgt_name=scan_CH_9p2
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 9.2 # CH
+
+#[63/66] CH:9.4
+launch --rewgt_name=scan_CH_9p4
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 9.4 # CH
+
+#[64/66] CH:9.6
+launch --rewgt_name=scan_CH_9p6
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 9.6 # CH
+
+#[65/66] CH:9.8
+launch --rewgt_name=scan_CH_9p8
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 9.8 # CH
+
+#[66/66] CH:10
+launch --rewgt_name=scan_CH_10
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 10 # CH
