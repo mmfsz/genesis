@@ -1,0 +1,140 @@
+#!/bin/bash
+
+GRIDPACKPATH=""
+TAG=""
+MEM_KB=2048 #2048
+N_CPUS=4 #4 #12
+SCRAM=slc7_amd64_gcc700
+CMSSW=CMSSW_10_6_0
+NJOBS=1
+NEVENTS=5000
+
+function print_help {
+cat << EOF
+usage: submit [-h] -g GRIPACKPATH [-t TAG] [-n NEVENTS] [-m MEM_KB] [-c N_CPUS] [--cmssw CMSSW] [--scram SCRAM]
+              [T2_SITE1 T2_SITE2 ...]
+
+Submit condor jobs for producing a gridpack
+
+required arguments:
+  -g GRIPACKPATH                absolute path to gridpack tarball.tar.xz
+optional arguments:
+  -h, --help                    show this help message and exit
+  -t TAG, --tag TAG             unique tag for identifying the output directory tasks/$PROCESS_$TAG (default: None)
+  -n NEVENTS, --n_events NEVENTS   number of NEVENTS to produce (default: $N_CPUS)
+  -m MEM_KB, --mem_kb MEM_KB    amount of memory to request in kilobytes (KB) (default: $MEM_KB)
+  -c N_CPUS, --n_cpus N_CPUS    number of CPUs to request for gridpack generation (default: $N_CPUS)
+  --cmssw CMSSW                 CMSSW version to use (default: $CMSSW)
+  --scram SCRAM                 SCRAM architecture to use (default: $SCRAM)
+
+trailing arguments:
+  T2_SITE1 T2_SITE2 ...         space-separated list of sites to submit job to (default: T2_US_Purdue)
+EOF
+exit 0
+}
+
+# Read the CLI options
+TEMP=`getopt -o hcg:t: --long help,gp:,tag:,n_events:,mem_kb:,n_cpus:,cmssw:,scram: -- "$@"`
+eval set -- "$TEMP"
+# Extract options and their arguments
+while true; do
+    case "$1" in        
+        -h|--help)
+            print_help; shift 1;;  
+        -g|--gp)
+            GRIDPACKPATH=$2; shift 2;;     
+        -t|--tag)
+            echo $2   
+            TAG=$2; shift 2;;
+        -n|--n_events)
+            NEVENTS=$2; shift 2;; 
+        -m|--mem_kb)
+            MEM_KB=$2; shift 2;;
+        -c|--n_cpus)
+            N_CPUS=$2; shift 2;;
+        --cmssw)
+            CMSSW=$2; shift 2;;
+        --scram)
+            SCRAM=$2; shift 2;;        
+        --) shift; break;;
+        *) echo "Internal error!"; exit 1;;
+    esac
+done
+SITES=$@
+
+echo "GRIDPACKPATH: " $GRIDPACKPATH
+
+
+if [[ "$SITES" == "" ]]; then
+    SITES="T2_US_UCSD" #"T2_US_Purdue"
+fi
+
+if [[ "$GRIDPACKPATH" == "" ]]; then
+    echo "ERROR: no gridpack file provided"
+    print_help
+    exit 1
+elif [[ ! -f $GRIDPACKPATH ]]; then
+    echo "ERROR: file $GRIDPACKPATH does not exist"
+    exit 1
+fi
+
+# Get process from gridpack file name
+GRIDPACKFILENAME=$(basename $GRIDPACKPATH)
+echo "GRIDPACKFILENAME: " $GRIDPACKFILENAME
+OUTPUT_DIR_NAME=${GRIDPACKFILENAME//${SCRAM}_${CMSSW}_}
+OUTPUT_DIR_NAME=${OUTPUT_DIR_NAME//_tarball.tar.xz}
+OUTPUT_DIR_NAME=${OUTPUT_DIR_NAME//tarball.tar.xz}
+echo "GRIDPACKFILENAME: " $GRIDPACKFILENAME
+echo "OUTPUT_DIR_NAME: " $OUTPUT_DIR_NAME
+
+#PROCESS=${GRIDPACKFILENAME%_slc*}
+
+
+echo "TASKDIR: " $TASKDIR
+if [[ "$TAG" != "" ]]; then
+    OUTPUT_DIR_NAME=${OUTPUT_DIR_NAME}_${TAG}    
+fi
+TASKDIR=$PWD/tasks/$OUTPUT_DIR_NAME
+
+if [[ -d $TASKDIR ]]; then
+    echo "ERROR: $TASKDIR already exists; move or delete it and run again"
+    exit 1
+fi
+
+# Create condor submit and output directory
+mkdir -p $TASKDIR
+ls $TASKDIR
+
+
+condor_exe=condor_executable_runcmsgrid
+cp $PWD/$condor_exe $TASKDIR/$condor_exe
+
+cat << EOF > $TASKDIR/submit.cmd
+universe                = Vanilla
+Requirements            = ((HAS_SINGULARITY=?=True)&&(Machine != "cabinet-0-0-17.t2.ucsd.edu")&&(Machine != "cabinet-4-4-12.t2.ucsd.edu"))
+RequestMemory           = $MEM_KB
+RequestCpus             = $N_CPUS
+executable              = $TASKDIR/$condor_exe
+arguments               = $USER $CMSSW $SCRAM $GRIDPACKFILENAME \$(Process) $N_CPUS $NEVENTS
+transfer_executable     = True
+transfer_input_files    = $GRIDPACKPATH
+transfer_output_files   = ""
+log                     = $TASKDIR/condor.log
+output                  = $TASKDIR/1e.\$(Cluster).\$(Process).stdout
+error                   = $TASKDIR/1e.\$(Cluster).\$(Process).stderr
+notification            = Never
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+x509userproxy           = /tmp/x509up_u$(id -u)
+use_x509userproxy       = True
++DESIRED_Sites          = "$SITES"
++JobBatchName           = "$OUTPUT_DIR_NAME"
++project_Name           = "cmssurfandturf"
++tag                    = "$TAG"
+
+queue $NJOBS
+EOF
+
+echo "Condor job files written to $TASKDIR"
+
+condor_submit $TASKDIR/submit.cmd
