@@ -92,6 +92,7 @@ rm LHEGS_${CAMPAIGN}.root
 # Pileup: /Neutrino_E-10_gun/RunIISummer20ULPrePremix-UL17_106X_mc2017_realistic_v6-v3/PREMIX
 RANDOM_PILEUPFILES=$(shuf -n 5 $SCRIPT_DIR/pileup_files.txt | tr '\n' ',') 
 RANDOM_PILEUPFILES=${RANDOM_PILEUPFILES::-1} # trim last comma
+echo "Will use the following RANDOM_PILEUPFILES: $RANDOM_PILEUPFILES"
 
 setup_cmssw CMSSW_10_6_17_patch1 slc7_amd64_gcc700
 cmsDriver.py \
