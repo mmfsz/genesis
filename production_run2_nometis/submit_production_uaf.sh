@@ -12,7 +12,7 @@ CAMPAIGN=""
 NEVENTS=""
 NJOBS=""
 TAG=""  # Optional argument
-MEM_KB=2048
+MEMORY=2 # MB
 N_CPUS=4
 BASEDIR=`pwd`
 
@@ -86,7 +86,7 @@ mv $BASEDIR/$TARPACKAGE .
 OUTPUTDIRBASE="/ceph/cms/store/user/mmazza/SignalGeneration"
 OUTPUTDIR=${OUTPUTDIRBASE}/${TAG}/${DATASET_NAME}
 OUTPUTDIR_MINI=${OUTPUTDIR//NANO/MINI}
-mkdir -p $OUTPUTDIR $OUTPUTDIR_MINI
+#mkdir -p $OUTPUTDIR $OUTPUTDIR_MINI
 
 echo "Condor job logs will be written to $TASKDIR"
 echo "Output files will be stored in $OUTPUTDIR and $OUTPUTDIR_MINI"
@@ -94,8 +94,8 @@ echo "Output files will be stored in $OUTPUTDIR and $OUTPUTDIR_MINI"
 cat << EOF > submit.cmd
 Universe                = Vanilla
 Requirements            = ((HAS_SINGULARITY=?=True)&&(Machine =!= LastRemoteHost)&&(Machine != "cabinet-0-0-17.t2.ucsd.edu")&&(Machine != "cabinet-4-4-12.t2.ucsd.edu"))
-RequestMemory           = $MEM_KB
 RequestCpus             = $N_CPUS
+RequestMemory           = $MEMORY
 
 executable              = executable.sh
 transfer_executable     = True
@@ -106,7 +106,6 @@ transfer_output_files   = ""
 log                     = condor.log
 output                  = job.\$(Cluster).\$(Process).\$(Retry).stdout
 error                   = job.\$(Cluster).\$(Process).\$(Retry).stderr
-
 
 should_transfer_files   = YES
 when_to_transfer_output = ON_EXIT
@@ -123,4 +122,5 @@ MY.SingularityImage     = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/cmssw
 queue ${NJOBS}
 EOF
 
+echo "Submitting job to condor"
 condor_submit submit.cmd
