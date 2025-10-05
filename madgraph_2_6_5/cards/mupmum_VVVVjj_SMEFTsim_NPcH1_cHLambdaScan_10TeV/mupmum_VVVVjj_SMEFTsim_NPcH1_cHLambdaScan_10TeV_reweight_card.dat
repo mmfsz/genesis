@@ -1,0 +1,425 @@
+# MM: Card created automatically with create_reweight_card.py
+change mode NLO       # Define type of Reweighting. For LO sample this command
+                      # has no effect since only LO mode is allowed.
+change helicity False # carry out sum over helicities (CHECK)
+change rwgt_dir rwgt
+
+#[1/84] Lambda:500 c3:-50.0
+launch --rewgt_name=scan_Lambda_500_C3_m50p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[2/84] Lambda:500 c3:-20.0
+launch --rewgt_name=scan_Lambda_500_C3_m20p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[3/84] Lambda:500 c3:-10.0
+launch --rewgt_name=scan_Lambda_500_C3_m10p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[4/84] Lambda:500 c3:-1.0
+launch --rewgt_name=scan_Lambda_500_C3_m1p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[5/84] Lambda:500 c3:0.0
+launch --rewgt_name=scan_Lambda_500_C3_0p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[6/84] Lambda:500 c3:1.0
+launch --rewgt_name=scan_Lambda_500_C3_1p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[7/84] Lambda:500 c3:2.0
+launch --rewgt_name=scan_Lambda_500_C3_2p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[8/84] Lambda:500 c3:4.0
+launch --rewgt_name=scan_Lambda_500_C3_4p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[9/84] Lambda:500 c3:10.0
+launch --rewgt_name=scan_Lambda_500_C3_10p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[10/84] Lambda:500 c3:30.0
+launch --rewgt_name=scan_Lambda_500_C3_30p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[11/84] Lambda:500 c3:60.0
+launch --rewgt_name=scan_Lambda_500_C3_60p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[12/84] Lambda:500 c3:100.0
+launch --rewgt_name=scan_Lambda_500_C3_100p0
+set SMEFTCUTOFF 1 500 # Lambda
+set SMEFT 3 100.0 # C3
+
+#[13/84] Lambda:1000 c3:-50.0
+launch --rewgt_name=scan_Lambda_1000_C3_m50p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[14/84] Lambda:1000 c3:-20.0
+launch --rewgt_name=scan_Lambda_1000_C3_m20p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[15/84] Lambda:1000 c3:-10.0
+launch --rewgt_name=scan_Lambda_1000_C3_m10p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[16/84] Lambda:1000 c3:-1.0
+launch --rewgt_name=scan_Lambda_1000_C3_m1p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[17/84] Lambda:1000 c3:0.0
+launch --rewgt_name=scan_Lambda_1000_C3_0p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[18/84] Lambda:1000 c3:1.0
+launch --rewgt_name=scan_Lambda_1000_C3_1p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[19/84] Lambda:1000 c3:2.0
+launch --rewgt_name=scan_Lambda_1000_C3_2p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[20/84] Lambda:1000 c3:4.0
+launch --rewgt_name=scan_Lambda_1000_C3_4p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[21/84] Lambda:1000 c3:10.0
+launch --rewgt_name=scan_Lambda_1000_C3_10p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[22/84] Lambda:1000 c3:30.0
+launch --rewgt_name=scan_Lambda_1000_C3_30p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[23/84] Lambda:1000 c3:60.0
+launch --rewgt_name=scan_Lambda_1000_C3_60p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[24/84] Lambda:1000 c3:100.0
+launch --rewgt_name=scan_Lambda_1000_C3_100p0
+set SMEFTCUTOFF 1 1000 # Lambda
+set SMEFT 3 100.0 # C3
+
+#[25/84] Lambda:2000 c3:-50.0
+launch --rewgt_name=scan_Lambda_2000_C3_m50p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[26/84] Lambda:2000 c3:-20.0
+launch --rewgt_name=scan_Lambda_2000_C3_m20p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[27/84] Lambda:2000 c3:-10.0
+launch --rewgt_name=scan_Lambda_2000_C3_m10p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[28/84] Lambda:2000 c3:-1.0
+launch --rewgt_name=scan_Lambda_2000_C3_m1p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[29/84] Lambda:2000 c3:0.0
+launch --rewgt_name=scan_Lambda_2000_C3_0p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[30/84] Lambda:2000 c3:1.0
+launch --rewgt_name=scan_Lambda_2000_C3_1p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[31/84] Lambda:2000 c3:2.0
+launch --rewgt_name=scan_Lambda_2000_C3_2p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[32/84] Lambda:2000 c3:4.0
+launch --rewgt_name=scan_Lambda_2000_C3_4p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[33/84] Lambda:2000 c3:10.0
+launch --rewgt_name=scan_Lambda_2000_C3_10p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[34/84] Lambda:2000 c3:30.0
+launch --rewgt_name=scan_Lambda_2000_C3_30p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[35/84] Lambda:2000 c3:60.0
+launch --rewgt_name=scan_Lambda_2000_C3_60p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[36/84] Lambda:2000 c3:100.0
+launch --rewgt_name=scan_Lambda_2000_C3_100p0
+set SMEFTCUTOFF 1 2000 # Lambda
+set SMEFT 3 100.0 # C3
+
+#[37/84] Lambda:5000 c3:-50.0
+launch --rewgt_name=scan_Lambda_5000_C3_m50p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[38/84] Lambda:5000 c3:-20.0
+launch --rewgt_name=scan_Lambda_5000_C3_m20p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[39/84] Lambda:5000 c3:-10.0
+launch --rewgt_name=scan_Lambda_5000_C3_m10p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[40/84] Lambda:5000 c3:-1.0
+launch --rewgt_name=scan_Lambda_5000_C3_m1p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[41/84] Lambda:5000 c3:0.0
+launch --rewgt_name=scan_Lambda_5000_C3_0p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[42/84] Lambda:5000 c3:1.0
+launch --rewgt_name=scan_Lambda_5000_C3_1p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[43/84] Lambda:5000 c3:2.0
+launch --rewgt_name=scan_Lambda_5000_C3_2p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[44/84] Lambda:5000 c3:4.0
+launch --rewgt_name=scan_Lambda_5000_C3_4p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[45/84] Lambda:5000 c3:10.0
+launch --rewgt_name=scan_Lambda_5000_C3_10p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[46/84] Lambda:5000 c3:30.0
+launch --rewgt_name=scan_Lambda_5000_C3_30p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[47/84] Lambda:5000 c3:60.0
+launch --rewgt_name=scan_Lambda_5000_C3_60p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[48/84] Lambda:5000 c3:100.0
+launch --rewgt_name=scan_Lambda_5000_C3_100p0
+set SMEFTCUTOFF 1 5000 # Lambda
+set SMEFT 3 100.0 # C3
+
+#[49/84] Lambda:10000 c3:-50.0
+launch --rewgt_name=scan_Lambda_10000_C3_m50p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[50/84] Lambda:10000 c3:-20.0
+launch --rewgt_name=scan_Lambda_10000_C3_m20p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[51/84] Lambda:10000 c3:-10.0
+launch --rewgt_name=scan_Lambda_10000_C3_m10p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[52/84] Lambda:10000 c3:-1.0
+launch --rewgt_name=scan_Lambda_10000_C3_m1p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[53/84] Lambda:10000 c3:0.0
+launch --rewgt_name=scan_Lambda_10000_C3_0p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[54/84] Lambda:10000 c3:1.0
+launch --rewgt_name=scan_Lambda_10000_C3_1p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[55/84] Lambda:10000 c3:2.0
+launch --rewgt_name=scan_Lambda_10000_C3_2p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[56/84] Lambda:10000 c3:4.0
+launch --rewgt_name=scan_Lambda_10000_C3_4p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[57/84] Lambda:10000 c3:10.0
+launch --rewgt_name=scan_Lambda_10000_C3_10p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[58/84] Lambda:10000 c3:30.0
+launch --rewgt_name=scan_Lambda_10000_C3_30p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[59/84] Lambda:10000 c3:60.0
+launch --rewgt_name=scan_Lambda_10000_C3_60p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[60/84] Lambda:10000 c3:100.0
+launch --rewgt_name=scan_Lambda_10000_C3_100p0
+set SMEFTCUTOFF 1 10000 # Lambda
+set SMEFT 3 100.0 # C3
+
+#[61/84] Lambda:50000 c3:-50.0
+launch --rewgt_name=scan_Lambda_50000_C3_m50p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[62/84] Lambda:50000 c3:-20.0
+launch --rewgt_name=scan_Lambda_50000_C3_m20p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[63/84] Lambda:50000 c3:-10.0
+launch --rewgt_name=scan_Lambda_50000_C3_m10p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[64/84] Lambda:50000 c3:-1.0
+launch --rewgt_name=scan_Lambda_50000_C3_m1p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[65/84] Lambda:50000 c3:0.0
+launch --rewgt_name=scan_Lambda_50000_C3_0p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[66/84] Lambda:50000 c3:1.0
+launch --rewgt_name=scan_Lambda_50000_C3_1p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[67/84] Lambda:50000 c3:2.0
+launch --rewgt_name=scan_Lambda_50000_C3_2p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[68/84] Lambda:50000 c3:4.0
+launch --rewgt_name=scan_Lambda_50000_C3_4p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[69/84] Lambda:50000 c3:10.0
+launch --rewgt_name=scan_Lambda_50000_C3_10p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[70/84] Lambda:50000 c3:30.0
+launch --rewgt_name=scan_Lambda_50000_C3_30p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[71/84] Lambda:50000 c3:60.0
+launch --rewgt_name=scan_Lambda_50000_C3_60p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[72/84] Lambda:50000 c3:100.0
+launch --rewgt_name=scan_Lambda_50000_C3_100p0
+set SMEFTCUTOFF 1 50000 # Lambda
+set SMEFT 3 100.0 # C3
+
+#[73/84] Lambda:100000 c3:-50.0
+launch --rewgt_name=scan_Lambda_100000_C3_m50p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 -50.0 # C3
+
+#[74/84] Lambda:100000 c3:-20.0
+launch --rewgt_name=scan_Lambda_100000_C3_m20p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 -20.0 # C3
+
+#[75/84] Lambda:100000 c3:-10.0
+launch --rewgt_name=scan_Lambda_100000_C3_m10p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 -10.0 # C3
+
+#[76/84] Lambda:100000 c3:-1.0
+launch --rewgt_name=scan_Lambda_100000_C3_m1p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 -1.0 # C3
+
+#[77/84] Lambda:100000 c3:0.0
+launch --rewgt_name=scan_Lambda_100000_C3_0p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 0.0 # C3
+
+#[78/84] Lambda:100000 c3:1.0
+launch --rewgt_name=scan_Lambda_100000_C3_1p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 1.0 # C3
+
+#[79/84] Lambda:100000 c3:2.0
+launch --rewgt_name=scan_Lambda_100000_C3_2p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 2.0 # C3
+
+#[80/84] Lambda:100000 c3:4.0
+launch --rewgt_name=scan_Lambda_100000_C3_4p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 4.0 # C3
+
+#[81/84] Lambda:100000 c3:10.0
+launch --rewgt_name=scan_Lambda_100000_C3_10p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 10.0 # C3
+
+#[82/84] Lambda:100000 c3:30.0
+launch --rewgt_name=scan_Lambda_100000_C3_30p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 30.0 # C3
+
+#[83/84] Lambda:100000 c3:60.0
+launch --rewgt_name=scan_Lambda_100000_C3_60p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 60.0 # C3
+
+#[84/84] Lambda:100000 c3:100.0
+launch --rewgt_name=scan_Lambda_100000_C3_100p0
+set SMEFTCUTOFF 1 100000 # Lambda
+set SMEFT 3 100.0 # C3
