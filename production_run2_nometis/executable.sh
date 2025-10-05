@@ -7,6 +7,22 @@ IJOB=$4
 SEED=$(( $IJOB + 99 )) #seed cannot be 0
 OUTPUTDIR=$5
 
+#X509_USER_PROXY=$1
+# Retrieve and set X509_USER_PROXY
+user=$(whoami)
+initial=${user:0:1}
+uid=$(id -u)
+proxy_path="/afs/cern.ch/user/$initial/$user/x509up_u$uid"
+
+if [[ -f "$proxy_path" ]]; then
+    export X509_USER_PROXY="$proxy_path"
+elif [[ -n "$X509_USER_PROXY" && -f "$X509_USER_PROXY" ]]; then
+    # Already set and exists (e.g., on UAF) - do nothing
+else
+    echo "Error: X509 user proxy not found or inaccessible"
+    exit 1
+fi
+
 function stageout {
     COPY_SRC=$1
     COPY_DEST=$2
@@ -113,6 +129,11 @@ fi
 
 # Copy output files over
 OUTDIR="${OUTPUTDIR/\/ceph\/cms\/store/$REP}"
+gfal-mkdir -p $OUTDIR
+echo "Creating output dir: $OUTDIR"
+env -i X509_USER_PROXY=${X509_USER_PROXY} gfal-mkdir -p $OUTDIR
+
+
 OUTPUTNAME="output"
 echo -e "\n --> Begin copying output to $OUTDIR" 
 echo "time before copy: $(date +%s)"
