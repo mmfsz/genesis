@@ -123,4 +123,6 @@ queue ${NJOBS}
 EOF
 
 echo "Submitting job to condor"
+#+JobFlavour = "workday"
+
 condor_submit submit.cmd

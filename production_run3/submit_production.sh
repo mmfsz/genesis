@@ -45,7 +45,7 @@ fi
 # Create output task dir
 DATASET_NAME="${GRIDPACK##*/}"          # get the filename from the path
 DATASET_NAME="${DATASET_NAME%%_4f_LO*}" # remove everything from "_4f_LO" onwards
-DATASET_NAME="${DATASET_NAME}_TuneCP5_${CAMPAIGN}_privateMC_NANO"
+DATASET_NAME="${DATASET_NAME}_TuneCP5_${CAMPAIGN}_privateMC_NANOGEN"
 #TASKNAME=$(basename "$GRIDPACK" | sed 's/\.tar\.xz$//')
 TASKDIR=$PWD/tasks/CondorTask_$DATASET_NAME
 if [[ "$TAG" != "" ]]; then

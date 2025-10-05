@@ -2,13 +2,17 @@
 SCRIPT_DIR=$(dirname ${BASH_SOURCE[0]}) # parent directory
 source $SCRIPT_DIR/../utils.sh          # setup_cmssw, inject_fragment, set_lhegs_seed
 
-CAMPAIGN=Run3Summer22
 FRAGMENT=$1
 GRIDPACK=$2
 CAMPAIGN=$3
 EVENTS=$4
 SEED=$5
 NORUN=$6
+
+if [[ "$CAMPAIGN" != "Run3Summer22" ]]; then
+  echo "Error: running configs for Run3Summer22 but CAMPAIGN is set to ${CAMPAIGN}"
+  exit 1
+fi
 
 echo "========================================"
 echo "SCRIPT_DIR = " $SCRIPT_DIR
@@ -27,7 +31,7 @@ echo "========================================"
 echo "========================================"
 echo "     Running LHEGEN production          "
 echo "========================================"
-# Prepid: SMP-RunIISummer20UL16wmLHEGEN-00002
+# Prepid: 
 setup_cmssw CMSSW_12_4_14_patch2 el8_amd64_gcc10 --no_scramb
 FRAGMENT_CMSSW=$(inject_fragment $FRAGMENT $GRIDPACK $EVENTS)
 echo "FRAGMENT_CMSSW = " $FRAGMENT_CMSSW
@@ -84,7 +88,7 @@ echo "     Running DRPremix production        "
 echo "========================================"
 # Prepid: HIG-Run3Summer22DRPremix-00212
 # Pileup:/Neutrino_E-10_gun/Run3Summer21PrePremix-Summer22_124X_mcRun3_2022_realistic_v11-v2/PREMIX
-RANDOM_PILEUPFILES=$(shuf -n 5 $SCRIPT_DIR/pileup_files.txt | tr '\n' ',') 
+RANDOM_PILEUPFILES=$(shuf -n 5 $SCRIPT_DIR/pileup_files.txt | tr '\n' ',')  # select 5 random pileup files
 RANDOM_PILEUPFILES=${RANDOM_PILEUPFILES::-1} # trim last comma
 
 setup_cmssw CMSSW_12_4_14_patch3 el8_amd64_gcc10
