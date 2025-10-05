@@ -23,7 +23,7 @@ echo "========================================"
 
 # == GEN,LHE =====================================
 # Prepid: SMP-RunIISummer20UL17wmLHEGEN-00001
-setup_cmssw CMSSW_12_4_8 el8_amd64_gcc10 --no_scramb
+setup_cmssw CMSSW_10_6_17_patch1 slc7_amd64_gcc700 --no_scramb
 FRAGMENT_CMSSW=$(inject_fragment $FRAGMENT $GRIDPACK $EVENTS)
 scram b -j8
 cd ../..
