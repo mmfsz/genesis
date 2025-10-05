@@ -1,0 +1,572 @@
+# MM: Card created automatically with create_reweight_card.py
+change mode NLO       # Define type of Reweighting. For LO sample this command
+                      # has no effect since only LO mode is allowed.
+change helicity False # carry out sum over helicities (CHECK)
+change rwgt_dir rwgt
+
+#[1/81] CV:1.0 C2W:-2.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[2/81] CV:1.0 C2W:-2.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[3/81] CV:1.0 C2W:-2.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[4/81] CV:1.0 C2W:-2.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[5/81] CV:1.0 C2W:-2.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[6/81] CV:1.0 C2W:-2.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[7/81] CV:1.0 C2W:-2.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[8/81] CV:1.0 C2W:-2.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[9/81] CV:1.0 C2W:-2.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m2p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -2.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[10/81] CV:1.0 C2W:-1.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[11/81] CV:1.0 C2W:-1.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[12/81] CV:1.0 C2W:-1.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[13/81] CV:1.0 C2W:-1.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[14/81] CV:1.0 C2W:-1.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[15/81] CV:1.0 C2W:-1.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[16/81] CV:1.0 C2W:-1.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[17/81] CV:1.0 C2W:-1.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[18/81] CV:1.0 C2W:-1.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_m1p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 -1.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[19/81] CV:1.0 C2W:0.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[20/81] CV:1.0 C2W:0.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[21/81] CV:1.0 C2W:0.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[22/81] CV:1.0 C2W:0.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[23/81] CV:1.0 C2W:0.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[24/81] CV:1.0 C2W:0.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[25/81] CV:1.0 C2W:0.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[26/81] CV:1.0 C2W:0.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[27/81] CV:1.0 C2W:0.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[28/81] CV:1.0 C2W:0.5 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[29/81] CV:1.0 C2W:0.5 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[30/81] CV:1.0 C2W:0.5 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[31/81] CV:1.0 C2W:0.5 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[32/81] CV:1.0 C2W:0.5 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[33/81] CV:1.0 C2W:0.5 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[34/81] CV:1.0 C2W:0.5 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[35/81] CV:1.0 C2W:0.5 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[36/81] CV:1.0 C2W:0.5 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_0p5_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 0.5 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[37/81] CV:1.0 C2W:1.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[38/81] CV:1.0 C2W:1.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[39/81] CV:1.0 C2W:1.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[40/81] CV:1.0 C2W:1.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[41/81] CV:1.0 C2W:1.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[42/81] CV:1.0 C2W:1.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[43/81] CV:1.0 C2W:1.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[44/81] CV:1.0 C2W:1.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[45/81] CV:1.0 C2W:1.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[46/81] CV:1.0 C2W:1.5 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[47/81] CV:1.0 C2W:1.5 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[48/81] CV:1.0 C2W:1.5 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[49/81] CV:1.0 C2W:1.5 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[50/81] CV:1.0 C2W:1.5 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[51/81] CV:1.0 C2W:1.5 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[52/81] CV:1.0 C2W:1.5 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[53/81] CV:1.0 C2W:1.5 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[54/81] CV:1.0 C2W:1.5 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_1p5_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.5 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[55/81] CV:1.0 C2W:2.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[56/81] CV:1.0 C2W:2.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[57/81] CV:1.0 C2W:2.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[58/81] CV:1.0 C2W:2.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[59/81] CV:1.0 C2W:2.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[60/81] CV:1.0 C2W:2.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[61/81] CV:1.0 C2W:2.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[62/81] CV:1.0 C2W:2.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[63/81] CV:1.0 C2W:2.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_2p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 2.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[64/81] CV:1.0 C2W:3.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[65/81] CV:1.0 C2W:3.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[66/81] CV:1.0 C2W:3.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[67/81] CV:1.0 C2W:3.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[68/81] CV:1.0 C2W:3.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[69/81] CV:1.0 C2W:3.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[70/81] CV:1.0 C2W:3.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[71/81] CV:1.0 C2W:3.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[72/81] CV:1.0 C2W:3.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_3p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 3.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[73/81] CV:1.0 C2W:4.0 C2Z:-2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_m2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 -2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[74/81] CV:1.0 C2W:4.0 C2Z:-1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_m1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 -1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[75/81] CV:1.0 C2W:4.0 C2Z:0.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_0p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 0.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[76/81] CV:1.0 C2W:4.0 C2Z:0.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_0p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 0.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[77/81] CV:1.0 C2W:4.0 C2Z:1.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 1.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[78/81] CV:1.0 C2W:4.0 C2Z:1.5 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_1p5_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 1.5 # C2Z
+set NEW 4 1.0 # C3
+
+#[79/81] CV:1.0 C2W:4.0 C2Z:2.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_2p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 2.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[80/81] CV:1.0 C2W:4.0 C2Z:3.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_3p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 3.0 # C2Z
+set NEW 4 1.0 # C3
+
+#[81/81] CV:1.0 C2W:4.0 C2Z:4.0 C3:1.0
+launch --rewgt_name=scan_CV_1p0_C2W_4p0_C2Z_4p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 4.0 # C2W
+set NEW 3 4.0 # C2Z
+set NEW 4 1.0 # C3
