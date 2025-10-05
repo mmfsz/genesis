@@ -1,0 +1,6 @@
+import model sm
+
+generate p p > w+ w+ h j j QCD=0
+add process p p > w- w- h j j QCD=0
+
+output VBSWWH_SS_VBSCuts_4f_LO_SMUFO_c2W_1p0_c2Z_1p0 -nojpeg

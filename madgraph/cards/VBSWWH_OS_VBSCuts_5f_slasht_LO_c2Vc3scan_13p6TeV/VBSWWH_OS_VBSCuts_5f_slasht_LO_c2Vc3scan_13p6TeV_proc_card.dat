@@ -1,0 +1,5 @@
+import model HHVBF_UFO-vbf_hh
+
+generate p p > w+ w- h j j / t QCD=0
+
+output VBSWWH_OS_VBSCuts_5f_slasht_LO_c2Vc3scan_13p6TeV -nojpeg

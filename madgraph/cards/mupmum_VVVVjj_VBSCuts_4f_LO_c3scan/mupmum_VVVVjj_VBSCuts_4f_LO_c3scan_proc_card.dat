@@ -1,0 +1,6 @@
+import model HHVBF_UFO-vbf_hh_4f
+
+define v = w+ w- z
+generate mu+ mu- > v v v v j j QCD=0
+
+output mupmum_VVVVjj_VBSCuts_4f_LO_c3scan -nojpeg

@@ -1,0 +1,6 @@
+import model HHVBF_UFO-vbf_hh_4f
+
+generate p p > w+ w+ h j j QCD=0 C2V^2==1
+add process p p > w- w- h j j QCD=0 C2V^2==1
+
+output VBSWWH_SS_VBSCuts_4f_LO_SM_C2Vpow2_eq1_13p6TeV -nojpeg

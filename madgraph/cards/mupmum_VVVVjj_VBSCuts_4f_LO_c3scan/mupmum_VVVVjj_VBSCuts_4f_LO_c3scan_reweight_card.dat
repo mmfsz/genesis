@@ -1,0 +1,137 @@
+# MM: Card created automatically with create_reweight_card.py
+change mode NLO       # Define type of Reweighting. For LO sample this command
+                      # has no effect since only LO mode is allowed.
+change helicity False # carry out sum over helicities (CHECK)
+change rwgt_dir rwgt
+
+#[1/22] CV:1.0 c2V:1.0 c3:-1
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_m1
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 -1 # C3
+
+#[2/22] CV:1.0 c2V:1.0 c3:-0.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_m0p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 -0.5 # C3
+
+#[3/22] CV:1.0 c2V:1.0 c3:-0.25
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_m0p25
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 -0.25 # C3
+
+#[4/22] CV:1.0 c2V:1.0 c3:0.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_0p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 0.0 # C3
+
+#[5/22] CV:1.0 c2V:1.0 c3:0.25
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_0p25
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 0.25 # C3
+
+#[6/22] CV:1.0 c2V:1.0 c3:0.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_0p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 0.5 # C3
+
+#[7/22] CV:1.0 c2V:1.0 c3:0.75
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_0p75
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 0.75 # C3
+
+#[8/22] CV:1.0 c2V:1.0 c3:1.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_1p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 1.0 # C3
+
+#[9/22] CV:1.0 c2V:1.0 c3:1.25
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_1p25
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 1.25 # C3
+
+#[10/22] CV:1.0 c2V:1.0 c3:1.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_1p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 1.5 # C3
+
+#[11/22] CV:1.0 c2V:1.0 c3:1.75
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_1p75
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 1.75 # C3
+
+#[12/22] CV:1.0 c2V:1.0 c3:2.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_2p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 2.0 # C3
+
+#[13/22] CV:1.0 c2V:1.0 c3:2.25
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_2p25
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 2.25 # C3
+
+#[14/22] CV:1.0 c2V:1.0 c3:2.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_2p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 2.5 # C3
+
+#[15/22] CV:1.0 c2V:1.0 c3:2.75
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_2p75
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 2.75 # C3
+
+#[16/22] CV:1.0 c2V:1.0 c3:3.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_3p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 3.0 # C3
+
+#[17/22] CV:1.0 c2V:1.0 c3:3.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_3p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 3.5 # C3
+
+#[18/22] CV:1.0 c2V:1.0 c3:4.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_4p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 4.0 # C3
+
+#[19/22] CV:1.0 c2V:1.0 c3:4.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_4p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 4.5 # C3
+
+#[20/22] CV:1.0 c2V:1.0 c3:5.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_5p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 5.0 # C3
+
+#[21/22] CV:1.0 c2V:1.0 c3:5.5
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_5p5
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 5.5 # C3
+
+#[22/22] CV:1.0 c2V:1.0 c3:6.0
+launch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_6p0
+set NEW 1 1.0 # CV
+set NEW 2 1.0 # C2V
+set NEW 3 6.0 # C3
