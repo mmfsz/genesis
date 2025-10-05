@@ -123,6 +123,7 @@ should_transfer_files   = YES
 when_to_transfer_output = ON_EXIT
 x509userproxy           = /tmp/x509up_u$(id -u)
 use_x509userproxy       = True
+MY.SingularityImage     = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/cmssw/el7:$(uname -m)"
 +DESIRED_Sites          = "$SITES"
 +JobBatchName           = "$PROCESS"
 +project_Name           = "cmssurfandturf"

@@ -84,6 +84,9 @@ echo "args: $@"
 
 echo -e "\n--- end header output ---\n" #                       <----- section division
 
+echo -e "\n--- check singularity setup ---\n" #  
+cat /etc/redhat-release 
+
 echo "before unpacking: ls -lrth"
 ls -lrth 
 
