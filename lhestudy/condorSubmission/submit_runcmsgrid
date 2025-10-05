@@ -1,13 +1,13 @@
 #!/bin/bash
 
 GRIDPACKPATH=""
-TAG=""
+TAG="20k"
 MEM_KB=2048 #2048
 N_CPUS=4 #4 #12
 SCRAM=slc7_amd64_gcc700
 CMSSW=CMSSW_10_6_0
-NJOBS=1
-NEVENTS=5000
+NJOBS=5
+NEVENTS=20000
 
 function print_help {
 cat << EOF
@@ -127,6 +127,7 @@ should_transfer_files   = YES
 when_to_transfer_output = ON_EXIT
 x509userproxy           = /tmp/x509up_u$(id -u)
 use_x509userproxy       = True
+MY.SingularityImage     = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/cmssw/el7:$(uname -m)"
 +DESIRED_Sites          = "$SITES"
 +JobBatchName           = "$OUTPUT_DIR_NAME"
 +project_Name           = "cmssurfandturf"

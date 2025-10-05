@@ -32,6 +32,7 @@ function chirp {
     ret=$?
     echo "[chirp] Chirped $1 => $2 with exit code $ret"
 }
+
 function stageout {
     COPY_SRC=$1
     COPY_DST=$2
@@ -140,9 +141,14 @@ cd tmpdir
 tar -xaf ../$GRIDPACKFILENAME
 ls -lrth 
 
-echo "Began execution on " `date` #Only to display the starting of production date
+
+echo "Add new line to runcmsgrid.sh to overwrite max_events_per_iteration setting to be 1000"
+sed -i '/# set starting variables/i max_events_per_iteration=1000' runcmsgrid.sh
+cat runcmsgrid.sh
+
+echo -e "\n\n Began execution on $(date)" #Only to display the starting of production date
 sh runcmsgrid.sh $NEVENTS $CONDORPROCESS $N_CPUS
-echo "Finished execution on " `date` #Only to display the starting of production date
+echo "Finished execution on $(date)" #Only to display the starting of production date
 
 cd ../.
 #tar -cJpsf $OUTPUT_TAR_NAME tmpdir

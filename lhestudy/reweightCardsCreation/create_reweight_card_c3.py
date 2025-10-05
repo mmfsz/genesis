@@ -26,8 +26,8 @@ text = [
         # 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0,
         # 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0]
 
-l_c2V = [1.0, 1.5, 2.0, 3.0, 4.0] #9
-l_c3 = [1.0, 2.0, 5.0, 10.0, 20.0] #-40.0, -20.0, -10.0, -3.0, 0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 40.0] #11
+
+l_c3 = [-1, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0]
 
 
 
@@ -39,19 +39,16 @@ def numStr(num):
 #
 
 counter = 1
-n_tot = str(len(l_c2V)*len(l_c3))
-table = ['rwtg c2V c3']
-for c2V in l_c2V:
-    for c3 in l_c3:
-        text.append('\n\n#['+str(counter)+'/'+n_tot+'] CV:1.0 c2V:'+str(c2V)+' c3:'+str(c3))
-        text.append('\nlaunch --rewgt_name=scan_CV_1p0_C2V_'+numStr(c2V)+'_C3_'+numStr(c3))
-        text.append('\nset NEW 1 1.0 # CV')
-        text.append('\nset NEW 2 ' + str(c2V) + ' # C2V')
-        text.append('\nset NEW 3 ' + str(c3) + ' # C3')
-
-        table.append('\n'+str(counter)+' '+str(c2V)+' '+str(c3))
-
-        counter += 1
+n_tot = str(len(l_c3))
+table = ['rwtg c3']
+for c3 in l_c3:
+    text.append('\n\n#['+str(counter)+'/'+n_tot+'] CV:1.0 c2V:1.0 c3:'+str(c3))
+    text.append('\nlaunch --rewgt_name=scan_CV_1p0_C2V_1p0_C3_'+numStr(c3))
+    text.append('\nset NEW 1 1.0 # CV')
+    text.append('\nset NEW 2 1.0 # C2V')
+    text.append('\nset NEW 3 ' + str(c3) + ' # C3')
+    table.append('\n'+str(counter)+' '+str(c3))
+    counter += 1
 
 with open('./'+args.output+'/mg_reweight_card.dat', 'w') as f:
     f.writelines(text)

@@ -12,7 +12,7 @@ text = [
     '# MM: Card created automatically with create_reweight_card.py'
     '\nchange mode NLO       # Define type of Reweighting. For LO sample this command',
     '\n                      # has no effect since only LO mode is allowed.',
-    '\nchange helicity False # carry out sum over helicities (CHECK)',
+    '\nchange helicity False # carry out sum over helicities',
     '\nchange rwgt_dir rwgt'
 ]
 # #[1/37] CV:1.0 C2V:-2.0 C3:1.0
