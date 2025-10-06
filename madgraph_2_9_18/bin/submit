@@ -4,8 +4,6 @@ CARDDIR=""
 TAG=""
 MEM_KB=2048
 N_CPUS=4
-SCRAM=slc7_amd64_gcc700
-CMSSW=CMSSW_10_6_0
 
 function print_help {
 cat << EOF
@@ -111,7 +109,7 @@ Requirements            = ((HAS_SINGULARITY=?=True)&&(Machine != "cabinet-0-0-17
 RequestMemory           = $MEM_KB
 RequestCpus             = $N_CPUS
 executable              = $TASKDIR/condor_executable
-arguments               = $USER $CMSSW $SCRAM
+arguments               = $USER 
 transfer_executable     = True
 transfer_input_files    = $TASKDIR/${PROCESS}.tar.gz
 transfer_output_files   = ""
@@ -123,7 +121,7 @@ should_transfer_files   = YES
 when_to_transfer_output = ON_EXIT
 x509userproxy           = /tmp/x509up_u$(id -u)
 use_x509userproxy       = True
-MY.SingularityImage     = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/cmssw/el7:$(uname -m)"
+MY.SingularityImage     = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/cmssw/el8:$(uname -m)"
 +DESIRED_Sites          = "$SITES"
 +JobBatchName           = "$PROCESS"
 +project_Name           = "cmssurfandturf"
