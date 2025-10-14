@@ -14,10 +14,11 @@ initial=${user:0:1}
 uid=$(id -u)
 proxy_path="/afs/cern.ch/user/$initial/$user/x509up_u$uid"
 
+echo "X509_USER_PROXY = $X509_USER_PROXY"
 if [[ -f "$proxy_path" ]]; then
     export X509_USER_PROXY="$proxy_path"
 elif [[ -n "$X509_USER_PROXY" && -f "$X509_USER_PROXY" ]]; then
-    # Already set and exists (e.g., on UAF) - do nothing
+    echo Proxy already set and exists, e.g. on UAF - do nothing
 else
     echo "Error: X509 user proxy not found or inaccessible"
     exit 1
