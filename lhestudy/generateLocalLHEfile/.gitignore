@@ -1,0 +1,4 @@
+./gridpacks/
+*tmp*
+*.tar.xz
+./*/.tar.xz
