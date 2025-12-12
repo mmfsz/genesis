@@ -2,8 +2,10 @@
 input_file=$1 # e.g. output_1.root
 input_mini_dir_path=$2
 output_nano_dir_path=$3 # this directory is created in the submit script
-EVENTS=$4
-NORUN=$5
+era=$4
+conditions=$5
+EVENTS=$6
+NORUN=$7
 
 input_mini_file="${input_mini_dir_path}/${input_file}"
 tmp_mini_file="MiniAODv2.root"
@@ -15,6 +17,8 @@ echo "========================================"
 echo "input_file = " $input_file
 echo "input_mini_dir_path = " $input_mini_dir_path
 echo "output_nano_dir_path = " $output_nano_dir_path
+echo "era = " $era
+echo "conditions = " $conditions
 echo "EVENTS = " $EVENTS
 echo "NORUN = " $NORUN
 
@@ -129,16 +133,15 @@ cmsDriver.py  \
     --eventcontent NANOAODSIM \
     --customise Configuration/DataProcessing/Utils.addMonitoring \
     --datatier NANOAODSIM \
-    --conditions 150X_mcRun2_asymptotic_preVFP_v1 \
+    --conditions $conditions \
     --step NANO \
-    --era Run2_2016_HIPM,run2_nanoAOD_106Xv2 \
+    --era $era \
     --python_filename NanoAODv15_cfg.py \
     --fileout file:NanoAODv15.root \
     --filein file:MiniAODv2.root \
     --no_exec \
     --mc \
     -n $EVENTS;
-
 
 
 if [[ "$NORUN" != "true" ]]; then 

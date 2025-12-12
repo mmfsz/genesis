@@ -86,10 +86,10 @@ for mini_dir in $mini_dirs; do
 
   # Map to short campaign and era
   case "$campaign_long" in
-    *UL16APV) campaign_short="2016APV"; era="Run2_2016_HIPM,run2_nanoAOD_106Xv2" ;;
-    *UL16) campaign_short="2016"; era="Run2_2016,run2_nanoAOD_106Xv2" ;;
-    *UL17) campaign_short="2017"; era="Run2_2017,run2_nanoAOD_106Xv2" ;;
-    *UL18) campaign_short="2018"; era="Run2_2018,run2_nanoAOD_106Xv2" ;;
+    *UL16APV) campaign_short="2016APV"; era="Run2_2016_HIPM,run2_nanoAOD_106Xv2"; conditions="150X_mcRun2_asymptotic_preVFP_v1" ;;
+    *UL16) campaign_short="2016"; era="Run2_2016,run2_nanoAOD_106Xv2"; conditions="150X_mcRun2_asymptotic_v1" ;;
+    *UL17) campaign_short="2017"; era="Run2_2017,run2_nanoAOD_106Xv2"; conditions="150X_mc2017_realistic_v1" ;;
+    *UL18) campaign_short="2018"; era="Run2_2018,run2_nanoAOD_106Xv2"; conditions="150X_mc2018_realistic_v1" ;;
     *) echo "Unknown campaign: $campaign_long. Skipping."; continue ;;
   esac
 
@@ -98,7 +98,7 @@ for mini_dir in $mini_dirs; do
     continue
   fi
   # Use executable for this campaign
-  executable=${BASEDIR}/${campaign_long}.sh
+  executable=${BASEDIR}/executable.sh
 
   # Define output directory
   nano_dir="${mini_dir/MINIGEN/NANOv15}"
@@ -140,7 +140,7 @@ request_memory          = ${MEMORY}GB
 
 executable              = ${executable}
 transfer_executable     = True
-arguments               = \$(input_file) ${input_mini_dir_path} ${output_nano_dir_path} ${NEVENTS} false
+arguments               = \$(input_file) ${input_mini_dir_path} ${output_nano_dir_path} ${era} ${conditions} ${NEVENTS} false
 #transfer_input_files    = 
 transfer_output_files   = ""
 
